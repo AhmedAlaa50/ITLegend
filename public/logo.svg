@@ -1,0 +1,50 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#080264;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#182578;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#080264;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Circuit/Network symbol -->
+  <g transform="translate(10, 10)">
+    <!-- Main circuit board -->
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="url(#iconGradient)" opacity="0.1"/>
+    
+    <!-- Circuit lines -->
+    <path d="M8 8 L32 8 M8 20 L32 20 M8 32 L32 32" stroke="url(#iconGradient)" stroke-width="2" fill="none"/>
+    <path d="M8 8 L8 32 M20 8 L20 32 M32 8 L32 32" stroke="url(#iconGradient)" stroke-width="2" fill="none"/>
+    
+    <!-- Connection nodes -->
+    <circle cx="8" cy="8" r="3" fill="url(#iconGradient)"/>
+    <circle cx="20" cy="8" r="3" fill="url(#iconGradient)"/>
+    <circle cx="32" cy="8" r="3" fill="url(#iconGradient)"/>
+    <circle cx="8" cy="20" r="3" fill="url(#iconGradient)"/>
+    <circle cx="20" cy="20" r="3" fill="url(#iconGradient)"/>
+    <circle cx="32" cy="20" r="3" fill="url(#iconGradient)"/>
+    <circle cx="8" cy="32" r="3" fill="url(#iconGradient)"/>
+    <circle cx="20" cy="32" r="3" fill="url(#iconGradient)"/>
+    <circle cx="32" cy="32" r="3" fill="url(#iconGradient)"/>
+    
+    <!-- Central processor -->
+    <rect x="16" y="16" width="8" height="8" rx="2" fill="url(#iconGradient)"/>
+  </g>
+  
+  <!-- Text: ITLegend -->
+  <text x="65" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#logoGradient)">
+    IT
+  </text>
+  <text x="65" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#logoGradient)">
+    Legend
+  </text>
+  
+  <!-- Tagline -->
+  <text x="65" y="55" font-family="Arial, sans-serif" font-size="8" fill="#666">
+    Online IT Courses
+  </text>
+</svg>
