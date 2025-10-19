@@ -15,34 +15,27 @@ export default function Navbar() {
   const breadcrumbs = getBreadcrumbs(path);
 
   return (
-    <nav>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16">
-          {/* Breadcrumb Navigation */}
-          <div className="flex items-center">
-            <Breadcrumb>
-              <BreadcrumbList className="text-xs text-[var(--color-dark-text)]">
-                {breadcrumbs.map((breadcrumb, index) => (
-                  <div key={breadcrumb.href} className="flex items-center">
-                    <BreadcrumbItem>
-                      <BreadcrumbLink
-                        href={breadcrumb.href}
-                        className={cn(
-                          "text-[var(--color-dark-text)] hover:text-[var(--color-muted-foreground)]",
-                          index === breadcrumbs.length - 1 && "font-bold"
-                        )}
-                      >
-                        {breadcrumb.label}
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                    {index < breadcrumbs.length - 1 && <BreadcrumbSeparator />}
-                  </div>
-                ))}
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+    <nav className="mx-auto px-4 sm:px-6 lg:px-8 pb-4 flex items-center h-20">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb>
+        <BreadcrumbList>
+          {breadcrumbs.map((breadcrumb, index) => (
+            <div key={breadcrumb.href} className="flex items-center">
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  href={breadcrumb.href}
+                  className={cn(
+                    index === breadcrumbs.length - 1 && "font-bold"
+                  )}
+                >
+                  {breadcrumb.label}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              {index < breadcrumbs.length - 1 && <BreadcrumbSeparator />}
+            </div>
+          ))}
+        </BreadcrumbList>
+      </Breadcrumb>
     </nav>
   );
 }

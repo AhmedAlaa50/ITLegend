@@ -74,6 +74,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    // single string or array accepted
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32" }, // optional PNG fallback
+      { url: "/favicon.ico" }, // older-browser fallback
+    ],
+    shortcut: "/favicon.ico", // rel="shortcut icon"
+    apple: "/apple-touch-icon.png", // apple-touch-icon
+  },
 };
 
 export default function RootLayout({
